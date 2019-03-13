@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package gravatar;
+
+service GravatarService {
+    rpc Generate (GravatarRequest) returns (GravatarResponse) {
+    }
+}
+
+message GravatarRequest {
+    string email = 1;
+    uint32 size = 2;
+}
+
+message GravatarResponse {
+    string url = 1;
+}
